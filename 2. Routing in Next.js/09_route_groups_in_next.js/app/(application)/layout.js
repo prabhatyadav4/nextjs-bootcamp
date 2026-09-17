@@ -1,0 +1,28 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: {
+    template: "%s | KernalPrab",
+    default: "KernalPrab",
+  },
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <main>
+      <header>
+        <nav style={{ display: "flex", gap: "1rem" }}>
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/services">Services</Link>
+        </nav>
+      </header>
+
+      <main>{children}</main>
+
+      <footer>
+        <p>&copy; 2026 Demo App. All rights reserved.</p>
+      </footer>
+    </main>
+  );
+}
